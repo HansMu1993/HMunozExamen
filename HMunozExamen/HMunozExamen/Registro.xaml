@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HMunozExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text=""
+                FontSize="10" 
+                HorizontalOptions="Center" />
+
+            <Grid Padding="20,0" RowSpacing="1" ColumnSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="75" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <!--ENCABEZADO-->
+                <BoxView Grid.Row="0"
+                         Grid.ColumnSpan="3" 
+                         Color="Azure" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+
+
+                <Image Source="https://jorzgz0iptpc.cdn.shift8web.com/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png" Grid.Row="0"
+                       Grid.ColumnSpan="3" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--USUARIOL-->
+                <BoxView Grid.Row="1"
+                         Grid.ColumnSpan="3"
+                         Color="Azure" />
+
+                <Label x:Name="lblUsuario" Grid.Row="1"
+                       Grid.ColumnSpan="3" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" FontSize="45"/>
+                <!--LABEL USUARIO-->
+                <Label Text="Nombre :"
+                       Grid.Row="2" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1" 
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure"  FontSize="30"/>
+                <!--TXTX USUARIO-->
+                <Entry  x:Name="txtNombre"   
+                        Placeholder="Ingrese Nombre" 
+                        Keyboard="Text"
+                        Grid.Row="2"  
+                        Grid.ColumnSpan="1" 
+                        Grid.Column="2" 
+                        IsEnabled="true" 
+                        VerticalTextAlignment="Center"  
+                        FontSize="20" 
+                        BackgroundColor="Azure"/>
+                <!--lABEL CONTRASEAÑA-->
+                <Label Text="Pago Inicial"
+                       Grid.Row="3" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1" 
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure"  FontSize="30"/>
+                <!--TXT CONTRASEÑA1-->
+                <Entry  x:Name="txtPago" 
+                        Placeholder="Ingrese Pago Inicial" 
+                        Grid.Row="3" 
+                        Keyboard="Telephone"
+                        Grid.ColumnSpan="1" 
+                        Grid.Column="2" 
+                        IsEnabled="true"
+                        VerticalTextAlignment="Center" 
+                        FontSize="15"
+                        BackgroundColor="Azure"  IsPassword="False"/>
+
+                <!--lABEL CONTRASEAÑA-->
+                <Label Text="CuotaMensual"
+                       Grid.Row="4" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1" 
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure"  FontSize="30"/>
+                <!--TXT CONTRASEÑA1-->
+                <Entry  x:Name="txtCuota" 
+                        Placeholder="Su Cuota mensual aqui" IsReadOnly="True" 
+                        Grid.Row="4" 
+                        Grid.ColumnSpan="1" 
+                        Grid.Column="2" 
+                        IsEnabled="true"
+                        VerticalTextAlignment="Center" 
+                        FontSize="15"
+                        BackgroundColor="Azure"  IsPassword="False"/>
+
+                <!--SEPARADOR-->
+                <BoxView Grid.Row="5"
+                         Grid.ColumnSpan="3" 
+                         Color="Azure" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--BOTON DE CALCULO PRIMER PARCIAL-->
+                <Button Grid.Row="5"   
+                        Grid.ColumnSpan="3"
+                        x:Name="btnCalcular"  
+                        Text="Calcular Pago inicial"
+                        Clicked="btnCalcular_Clicked"
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                <!--SEPARADOR-->
+                <BoxView Grid.Row="6"
+                         Grid.ColumnSpan="3" 
+                         Color="Azure" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                <!--BOTON DE CALCULO PRIMER PARCIAL-->
+                <Button Grid.Row="6"   
+                        Grid.ColumnSpan="3"
+                        x:Name="btnGuardar"  
+                        Text="Guardar"
+                        Clicked="btnGuardar_Clicked"
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
